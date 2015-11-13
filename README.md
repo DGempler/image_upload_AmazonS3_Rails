@@ -124,7 +124,11 @@ In your server logs, you might see this after the incoming parameters are logged
 
 ### Issues you may run into
 
- - ##### Bundle, rails s, rake db:create; rake db:migrate
+ - ##### Don't forget to:
+
+ `bundle` <br/>
+ restart `rails s` <br/>
+ `rake db:create; rake db:migrate`
 
 
 
