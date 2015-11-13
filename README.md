@@ -56,7 +56,7 @@ gem 'aws-sdk', '~> 2'
 
 Don't forget to `bundle install` and restart your rails server after modifying the Gemfile!
 
-Create aws.rb and paperclip.rb config files in /config/initializers
+Create `aws.rb` and `paperclip.rb` config files in `config/initializers`
 
 ``` ruby
 
