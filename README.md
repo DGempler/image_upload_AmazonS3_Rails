@@ -4,12 +4,12 @@
 
  - [Create an account](https://aws.amazon.com)
  - Choose their [Simple Storage Service (S3)](aws.amazon.com/s3) option (this is currently free for 12 mo. after signup, with [limits](https://aws.amazon.com/free/))
- - Choose S3 from the online AWS console, and create a bucket. Choose a region. More on regions [here](http://docs.aws.amazon.com/general/latest/gr/rande.html).  - Create a user in (IAM) Security Credentials
+ - Choose S3 from the online AWS console, and create a bucket. Choose a region. More on regions and their endpoints [here](http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region).  - Create a user in (IAM) Security Credentials
   - Attach a Policy to that user - __Administrator Access__
  - Get access keys, save in environment (a gitignore-d .env file, or adding to your .zshrc / zshenv file, etc):
   `ENV['AWS_ACCESS_KEY_ID']` and `ENV['AWS_SECRET_ACCESS_KEY']`
- - While you're at it, throw in two more env. variables that you'll need later: `ENV[S3_BUCKET]` with your bucket name and chosen `ENV[AWS_REGION]`
-  - Actual syntax in env. file will be `export AWS_REGION=us-west-2`
+ - While you're at it, throw in three more env. variables that you'll need later: `ENV[S3_BUCKET]` with your bucket name, your chosen `ENV[AWS_REGION]` and `ENV[AWS_ENDPOINT]`. See regions and endpoints link above.
+  - Actual syntax in env. file will be `export AWS_REGION=us-west-2` or `export AWS_ENDPOINT=s3-us-west-2.amazonaws.com`
  - Edit CORS configuration
 ##### CORS Configuration Example=
 ``` xml
@@ -69,7 +69,7 @@ Aws.config.update({
 
 ``` ruby
 # /config/initializers/paperclip.rb
-Paperclip::Attachment.default_options[:s3_host_name] = "#{ENV['AWS_REGION']}.amazonaws.com"
+Paperclip::Attachment.default_options[:s3_host_name] = ENV['AWS_ENDPOINT']
 ```
 
 Then, set paperclip defaults and options in `config/environments/development.rb`. You can alternatively add the defaults to `config/application.rb`, but the last line (options) may not work if it's not in `development.rb`
