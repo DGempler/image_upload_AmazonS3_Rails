@@ -12,7 +12,7 @@
   - Actual syntax in env. file will be `export AWS_REGION=us-west-2` or `export AWS_ENDPOINT=s3-us-west-2.amazonaws.com`
  - Edit CORS configuration (in your bucket preferences under Properties/Permissions/Edit CORS Configuration)
 
-##### _CORS Configuration Example=_
+##### CORS Configuration Example=
 ``` xml
 <?xml version="1.0" encoding="UTF-8"?>
 <CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
