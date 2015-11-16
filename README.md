@@ -10,7 +10,7 @@
   `ENV['AWS_ACCESS_KEY_ID']` and `ENV['AWS_SECRET_ACCESS_KEY']`
  - While you're at it, throw in three more env. variables that you'll need later: `ENV[S3_BUCKET]` with your bucket name, your chosen `ENV[AWS_REGION]` and `ENV[AWS_ENDPOINT]`. See regions and endpoints link above.
   - Actual syntax in env. file will be `export AWS_REGION=us-west-2` or `export AWS_ENDPOINT=s3-us-west-2.amazonaws.com`
- - Edit CORS configuration (in your bucket preferences under Properties/Permissions/Edit CORS Configuration)
+ - Edit CORS configuration (in bucket preferences - Properties/Permissions/Edit CORS Configuration)
 
 ##### CORS Configuration Example=
 ``` xml
