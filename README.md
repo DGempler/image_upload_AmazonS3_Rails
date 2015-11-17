@@ -28,7 +28,7 @@
 
 ### Setting up Paperclip and ImageMagick
 
-[Paperclip](https://github.com/thoughtbot/paperclip) is an easy file attachment library for ActiveRecord. It helps get your uploaded images processed (via ImageMagick) and sent on to AWS.
+**[Paperclip](https://github.com/thoughtbot/paperclip)** is an easy file attachment library for ActiveRecord. It helps get your uploaded images processed (via ImageMagick) and sent on to AWS.
 
 `gem "paperclip", "~> 4.3"`
 
@@ -42,7 +42,7 @@ you must use the branch master of Paperclip, as paperclip 4.3 does not support a
 
 `gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"`
 
-<b>[ImageMagick](http://git.imagemagick.org/repos/ImageMagick)</b> will process your images (resize, change formats, etc.) before Paperclip sends them to Amazon. This means that they will automatically get saved in a temporary location in your project directory, so it won't work well with large file uploads.
+**[ImageMagick](http://git.imagemagick.org/repos/ImageMagick)** will process your images (resize, change formats, etc.) before Paperclip sends them to Amazon. This means that they will automatically get saved in a temporary location in your project directory, so it won't work well with large file uploads.
 
 ``
 brew install imagemagick
