@@ -33,6 +33,11 @@
 `gem "paperclip", "~> 4.3"`
 
 or, for latest version (recommended):
+ Note: As of 11/17/15  if you are using
+  ``
+  gem 'aws-sdk', '~> 2'
+  ``
+ you must use the branch master of Paperclip, as paperclip 4.3 does not support aws-sdk version 2. Link it in your gemfile as follows:
 
 `gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"`
 
