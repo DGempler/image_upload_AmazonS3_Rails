@@ -42,8 +42,7 @@ you must use the branch master of Paperclip, as paperclip 4.3 does not support a
 
 `gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"`
 
-<br/>
-[ImageMagick](http://git.imagemagick.org/repos/ImageMagick) will process your images (resize, change formats, etc.) before Paperclip sends them to Amazon. This means that they will automatically get saved in a temporary location in your project directory, so it won't work well with large file uploads.
+<b>[ImageMagick](http://git.imagemagick.org/repos/ImageMagick)</b> will process your images (resize, change formats, etc.) before Paperclip sends them to Amazon. This means that they will automatically get saved in a temporary location in your project directory, so it won't work well with large file uploads.
 
 ``
 brew install imagemagick
