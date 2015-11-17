@@ -10,7 +10,8 @@
   `ENV['AWS_ACCESS_KEY_ID']` and `ENV['AWS_SECRET_ACCESS_KEY']`
  - While you're at it, throw in three more env. variables that you'll need later: `ENV[S3_BUCKET]` with your bucket name, your chosen `ENV[AWS_REGION]` and `ENV[AWS_ENDPOINT]`. See regions and endpoints link above.
   - Actual syntax in env. file will be `export AWS_REGION=us-west-2` or `export AWS_ENDPOINT=s3-us-west-2.amazonaws.com`
- - Edit CORS configuration
+ - Edit CORS configuration (in bucket preferences - Properties/Permissions/Edit CORS Configuration)
+
 ##### CORS Configuration Example=
 ``` xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -32,11 +33,16 @@
 `gem "paperclip", "~> 4.3"`
 
 or, for latest version (recommended):
+<br/>
+Note: As of 11/17/15  if you are using
+``
+gem 'aws-sdk', '~> 2'
+``
+you must use the branch master of Paperclip, as paperclip 4.3 does not support aws-sdk version 2. Link it in your gemfile as follows:
 
 `gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"`
 
-<br/>
-[ImageMagick](http://git.imagemagick.org/repos/ImageMagick) will process your images (resize, change formats, etc.) before Paperclip sends them to Amazon. This means that they will automatically get saved in a temporary location in your project directory, so it won't work well with large file uploads.
+<b>[ImageMagick](http://git.imagemagick.org/repos/ImageMagick)</b> will process your images (resize, change formats, etc.) before Paperclip sends them to Amazon. This means that they will automatically get saved in a temporary location in your project directory, so it won't work well with large file uploads.
 
 ``
 brew install imagemagick
