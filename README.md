@@ -1,5 +1,5 @@
-## Uploading Images to AWS (SDK 2) with Rails 4.2.4, Paperclip 4.3, and ImageMagick
-
+## A Guide to Uploading Images to AWS (SDK 2) with Rails 4.2.4, Paperclip 4.3, and ImageMagick
+<br/>
 ### Getting Started with Amazon Web Services
 
  - [Create an account](https://aws.amazon.com)
