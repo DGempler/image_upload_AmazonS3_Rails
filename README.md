@@ -23,8 +23,7 @@ It was difficult to find a single resource that had correct and up-to-date infor
 
 `gem "paperclip", "~> 4.3"`
 
-or, for latest version (recommended):
-<br/>
+
 Note: As of 11/17/15  if you are using
 ``
 gem 'aws-sdk', '~> 2'
@@ -38,10 +37,11 @@ you must use the branch master of Paperclip, as paperclip 4.3 does not support a
 ``
 brew install imagemagick
 ``
+(or [install from source](http://www.imagemagick.org/script/install-source.php))
 
-Different settings will be required for Heroku deployment. There is also the option of sending images directly to AWS without processing, i.e., everything done on the front end, but your background processing is limited. If using Angular, make the user do it with [ng-file-upload](https://github.com/danialfarid/ng-file-upload).
+*Note: Different settings will be required for Heroku deployment. There is also the option of sending images directly to AWS without processing, i.e., everything done on the front end, but the processing you can do in the background is limited. If using Angular, make the user do it with [ng-file-upload](https://github.com/danialfarid/ng-file-upload).*
 
-Go through the [Quick Start](https://github.com/thoughtbot/paperclip#quick-start) guide on Paperclip. Set up your migration for your image column separately, i.e., add the image/avatar/whatever column to your model in a separate migration, as shown [here](https://github.com/thoughtbot/paperclip#migrations) in the Quick Start guide. They can still be migrated together in a single `db:migrate`.
+Go through the [Quick Start](https://github.com/thoughtbot/paperclip#quick-start) guide on Paperclip. Set up your migration for your image column separately, i.e., add the image/avatar/whatever column to your model in a separate migration, as shown [here](https://github.com/thoughtbot/paperclip#migrations) in the Quick Start guide. They can still be migrated together in a single `db:migrate` along with the rest of your migrations.
 
 ### Configuration, Security, and Syncing Paperclip with AWS
 
