@@ -1,12 +1,18 @@
 ## A Guide to Uploading Images to AWS (SDK 2) with Rails 4.2.4, Paperclip 4.3, and ImageMagick
 <br/>
+
+It was difficult to find a single resource that had correct and up-to-date information on how to make all of this work, so I've created this guide to show what worked for me.
+
+ I found that using AWS's S3, Paperclip 4.3, and ImageMagick worked best for my localhost application. There are changes that need to be made if you plan on putting your app up on Heroku (or adding a front-end framework like Angular), which I plan on addressing at some point in the future.
+
 ### Getting Started with Amazon Web Services
 
  - [Create an account](https://aws.amazon.com)
  - Choose their [Simple Storage Service (S3)](aws.amazon.com/s3) option (this is currently free for 12 mo. after signup, with [limits](https://aws.amazon.com/free/))
- - Choose S3 from the online AWS console, and create a bucket. Choose a region. More on regions and their endpoints [here](http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region).  - Create a user in (IAM) Security Credentials
-  - Attach a Policy to that user - __Administrator Access__
- - Get access keys, save in environment (a gitignore-d .env file, or adding to your .zshrc / zshenv file, etc):
+ - Choose S3 from the online AWS console, and create a bucket. Choose a region. More on regions and their endpoints [here](http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region).  
+ - Then create a user in (IAM) Security Credentials. Get there by clicking on your name in the nav bar, then Security Credentials in the dropdown, then select Users from the dashboard on the left side.
+  - Attach a Policy to that user - __Administrator Access__ (Permissions tab)
+ - Create your access key, save it with your id in environment (a gitignore-d .env file, or adding to your .zshrc / zshenv file, etc):
   `ENV['AWS_ACCESS_KEY_ID']` and `ENV['AWS_SECRET_ACCESS_KEY']`
  - While you're at it, throw in three more env. variables that you'll need later: `ENV[S3_BUCKET]` with your bucket name, your chosen `ENV[AWS_REGION]` and `ENV[AWS_ENDPOINT]`. See regions and endpoints link above.
   - Actual syntax in env. file will be `export AWS_REGION=us-west-2` or `export AWS_ENDPOINT=s3-us-west-2.amazonaws.com`
