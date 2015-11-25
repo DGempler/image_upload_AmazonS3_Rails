@@ -24,11 +24,11 @@ It was difficult to find a single resource that had correct and up-to-date infor
 `gem "paperclip", "~> 4.3"`
 
 
-Note: As of 11/17/15  if you are using
+_Note: As of 11/17/15  if you are using
 ``
 gem 'aws-sdk', '~> 2'
 ``
-you must use the branch master of Paperclip, as paperclip 4.3 does not support aws-sdk version 2. Link it in your gemfile as follows:
+you must use the branch master of Paperclip, as paperclip 4.3 does not support aws-sdk version 2. Link it in your gemfile as follows:_
 
 `gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"`
 
