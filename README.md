@@ -43,9 +43,9 @@ Go through the [Quick Start](https://github.com/thoughtbot/paperclip#quick-start
 
 Add the AWS gem:
 
-``
+`
 gem 'aws-sdk', '~> 2'
-``
+`
 
 Don't forget to `bundle install` and restart your rails server after modifying the Gemfile!
 
@@ -125,7 +125,8 @@ In your server logs, you might see this after the incoming parameters are logged
 
 
 
- - ##### Paperclip::Errors::NotIdentifiedByImageMagickError
+ - ** Paperclip::Errors::NotIdentifiedByImageMagickError **
+ 
 You likely have problems saving your images due to a bad install of your post-processor, ImageMagick.
 Try removing styles from your model (if you specified any) and see if it works:
 ``` ruby
