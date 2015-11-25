@@ -85,15 +85,15 @@ The path on the last line comes from ImageMagick. If you haven't done so already
 
 ### Upload the images
 
-In your forms, make sure to include `multipart: true`.
+In your forms, make sure to include `multipart: true`:
 
-``` ruby
+``` erb
 <%= form_for @human, html: {multipart: true} do |f| %>
 ```
 
-And if the image you are uploading isn't associated with a model.
+And if the image you are uploading isn't associated with a model:
 
-``` ruby
+``` erb
 <%= form_tag({:action => :upload}, :multipart => true) do %>
   <%= file_field_tag 'image' %>
 <% end %>
@@ -113,8 +113,6 @@ end
 
 In your server logs, you might see this after the incoming parameters are logged: `Unpermitted parameters: file`.
 
-
-
 ### Issues you may run into
 
  - ##### Don't forget to:
@@ -126,7 +124,7 @@ In your server logs, you might see this after the incoming parameters are logged
 
 
  - ** Paperclip::Errors::NotIdentifiedByImageMagickError **
- 
+
 You likely have problems saving your images due to a bad install of your post-processor, ImageMagick.
 Try removing styles from your model (if you specified any) and see if it works:
 ``` ruby
