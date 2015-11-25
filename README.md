@@ -162,3 +162,27 @@ I was able to solve this problem by uninstalling and reinstalling ImageMagick. Y
 [AWS docs for Ruby](http://docs.aws.amazon.com/sdkforruby/api/index.html)
 
 #### Future guides - adding Angular to the mix, Heroku deployments
+
+#### Deploying to Heroku
+- add your app to Heroku
+- change your CORS configuration to the following:
+``` xml
+<?xml version="1.0" encoding="UTF-8"?>
+<CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+    <CORSRule>
+        <AllowedOrigin>http://localhost:3000</AllowedOrigin>
+        <AllowedOrigin>root url of your heroku app here</AllowedOrigin>
+        <AllowedMethod>GET</AllowedMethod>
+        <AllowedMethod>POST</AllowedMethod>
+        <AllowedMethod>PUT</AllowedMethod>
+        <AllowedHeader>*</AllowedHeader>
+    </CORSRule>
+</CORSConfiguration>
+```
+- On the dashboard of your Heroku app, go to Settings/Config Variables/Reveal Config Variables.
+- Add the following key value pairs:
+  - AWS_ACCESS_KEY_ID
+  - AWS_SECRET_ACCESS_KEY
+  - S3_BUCKET
+  - AWS_REGION
+  - AWS_ENDPOINT
