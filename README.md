@@ -143,14 +143,17 @@ to
 ``` ruby
 has_attached_file :image
 ```
-I was able to solve this problem by uninstalling and reinstalling ImageMagick. You might have to do it a few times.
+I was able to solve this problem by uninstalling and reinstalling ImageMagick. You might have to do it a few times. If you used brew to install it:
+
+
 `brew uninstall imagemagick`
+
 `brew install imagemagick`
+
+
 
 ### Other Resources - some helpful, some not
 
-[This Heroku guide](https://devcenter.heroku.com/articles/paperclip-s3) was the most helpful resource I found for getting started, but was still missing necessary information.
+[This Heroku guide](https://devcenter.heroku.com/articles/paperclip-s3) was the most helpful resource I found for getting started (if planning to put up on Heroku), but was still missing some necessary information.
 
 [AWS docs for Ruby](http://docs.aws.amazon.com/sdkforruby/api/index.html)
-
-#### Future guides - adding Angular to the mix, Heroku deployments
