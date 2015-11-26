@@ -113,6 +113,12 @@ end
 
 In your server logs, you might see this after the incoming parameters are logged: `Unpermitted parameters: file`.
 
+### And that's it!
+
+You should now be able to see uploaded images in your bucket from the AWS console.
+
+You can access your images in rails/erb by using the [url property](https://github.com/thoughtbot/paperclip#show-view) created by Paperclip.
+
 ### Issues you may run into
 
  - ##### Don't forget to:
