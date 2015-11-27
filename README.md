@@ -1,7 +1,7 @@
 ## A Guide to Uploading Images to AWS (SDK 2) with Rails 4.2.4, Paperclip 4.3, and ImageMagick on localhost applications
 <br/>
 
-It was difficult to find a single resource that had correct and up-to-date information on how to make all of this work, so I've created this guide to show what worked for me.
+It was difficult to find a single resource that had correct and up-to-date information on how to make all of this work, so I've created this guide to show what worked for me. If you have any questions/comments feel free to reach me [on Twitter](https://twitter.com/dgempler) or make a pull request with any proposed changes.
 
  I found that using AWS's S3, Paperclip 4.3, and ImageMagick worked best for my localhost application. There are changes that need to be made if you plan on putting your app up on Heroku (or adding a front-end framework like Angular), which I plan on addressing at some point in the future.
 
