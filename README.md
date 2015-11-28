@@ -129,7 +129,7 @@ You can access your images in rails/erb by using the [url property](https://gith
 
 
 
- - ** Paperclip::Errors::NotIdentifiedByImageMagickError **
+ - **Paperclip::Errors::NotIdentifiedByImageMagickError**
 
 You likely have problems saving your images due to a bad install of your post-processor, ImageMagick.
 Try removing styles from your model (if you specified any) and see if it works:
